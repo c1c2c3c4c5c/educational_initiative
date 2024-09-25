@@ -1,0 +1,94 @@
+2024-09-24T10:45:29.980+05:30  WARN 19144 --- [DailyScheduleOrganiser] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h46m42s488ms716µs).
+2024-09-24T13:49:57.401+05:30  WARN 19144 --- [DailyScheduleOrganiser] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h1m54s379ms632µs300ns).
+2024-09-24T16:45:03.459+05:30  WARN 19144 --- [DailyScheduleOrganiser] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h55m11s830ms809µs).
+2024-09-24T17:16:32.885+05:30  INFO 19144 --- [DailyScheduleOrganiser] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-24T17:16:32.914+05:30  INFO 19144 --- [DailyScheduleOrganiser] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-24T17:16:42.620+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] .S.D.D.DailyScheduleOrganiserApplication : Starting DailyScheduleOrganiserApplication using Java 21.0.3 with PID 17764 (C:\Users\subha\Desktop\DailyScheduleOrganiser\target\classes started by subha in C:\Users\subha\Desktop\DailyScheduleOrganiser)
+2024-09-24T17:16:42.625+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] .S.D.D.DailyScheduleOrganiserApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-24T17:16:44.963+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-24T17:16:44.964+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-24T17:16:45.070+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-24T17:16:45.376+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-24T17:16:45.528+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-24T17:16:45.603+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-24T17:16:46.164+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-24T17:16:46.648+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30d15e4a
+2024-09-24T17:16:46.651+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-24T17:16:46.745+05:30  WARN 17764 --- [DailyScheduleOrganiser] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-24T17:16:47.802+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-24T17:16:48.387+05:30  WARN 17764 --- [DailyScheduleOrganiser] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-24T17:16:48.973+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] .S.D.D.DailyScheduleOrganiserApplication : Started DailyScheduleOrganiserApplication in 7.082 seconds (process running for 7.759)
+2024-09-24T17:17:12.159+05:30 ERROR 17764 --- [DailyScheduleOrganiser] [main] .S.D.D.DailyScheduleOrganiserApplication : Invalid date or time format
+
+java.time.format.DateTimeParseException: Text '12:000:00' could not be parsed, unparsed text found at index 5
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2111) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:2010) ~[na:na]
+	at java.base/java.time.LocalTime.parse(LocalTime.java:473) ~[na:na]
+	at java.base/java.time.LocalTime.parse(LocalTime.java:458) ~[na:na]
+	at com.Subhansh.DSO.DailyScheduleOrganiser.DailyScheduleOrganiserApplication.addTask(DailyScheduleOrganiserApplication.java:102) ~[classes/:na]
+	at com.Subhansh.DSO.DailyScheduleOrganiser.DailyScheduleOrganiserApplication.lambda$run$0(DailyScheduleOrganiserApplication.java:60) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.3.3.jar:3.3.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at com.Subhansh.DSO.DailyScheduleOrganiser.DailyScheduleOrganiserApplication.main(DailyScheduleOrganiserApplication.java:31) ~[classes/:na]
+
+2024-09-24T17:17:12.192+05:30 ERROR 17764 --- [DailyScheduleOrganiser] [main] o.s.boot.SpringApplication               : Application run failed
+
+com.Subhansh.DSO.DailyScheduleOrganiser.Exception.InvalidDateTimeException: Invalid date or time format. Please use the correct format.
+	at com.Subhansh.DSO.DailyScheduleOrganiser.DailyScheduleOrganiserApplication.addTask(DailyScheduleOrganiserApplication.java:107) ~[classes/:na]
+	at com.Subhansh.DSO.DailyScheduleOrganiser.DailyScheduleOrganiserApplication.lambda$run$0(DailyScheduleOrganiserApplication.java:60) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.3.3.jar:3.3.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at com.Subhansh.DSO.DailyScheduleOrganiser.DailyScheduleOrganiserApplication.main(DailyScheduleOrganiserApplication.java:31) ~[classes/:na]
+
+2024-09-24T17:17:12.208+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-24T17:17:12.220+05:30  INFO 17764 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-24T17:26:38.999+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] .S.D.D.DailyScheduleOrganiserApplication : Starting DailyScheduleOrganiserApplication using Java 21.0.3 with PID 9564 (C:\Users\subha\Desktop\DailyScheduleOrganiser\target\classes started by subha in C:\Users\subha\Desktop\DailyScheduleOrganiser)
+2024-09-24T17:26:39.002+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] .S.D.D.DailyScheduleOrganiserApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-24T17:26:41.116+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-24T17:26:41.116+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-24T17:26:41.185+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-24T17:26:41.421+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-24T17:26:41.507+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-24T17:26:41.565+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-24T17:26:42.067+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-24T17:26:42.600+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c678c7b
+2024-09-24T17:26:42.603+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-24T17:26:42.667+05:30  WARN 9564 --- [DailyScheduleOrganiser] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-24T17:26:43.719+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-24T17:26:44.236+05:30  WARN 9564 --- [DailyScheduleOrganiser] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-24T17:26:44.710+05:30  INFO 9564 --- [DailyScheduleOrganiser] [main] .S.D.D.DailyScheduleOrganiserApplication : Started DailyScheduleOrganiserApplication in 6.443 seconds (process running for 7.095)
+2024-09-24T18:08:25.421+05:30  WARN 9564 --- [DailyScheduleOrganiser] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m42s382ms235µs500ns).
